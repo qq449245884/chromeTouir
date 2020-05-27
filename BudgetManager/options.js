@@ -21,7 +21,6 @@ $(function() {
     chrome.storage.sync.set({
       "total": 0
     }, function() {
-      console.log('1111111111111111111')
       var notifOptons = {
         type: 'basic',
         iconUrl: 'icon48.png',
@@ -29,7 +28,6 @@ $(function() {
         message: "总支出已重置为0"
       }
       chrome.notifications.create('limitNotif', notifOptons)
-      notification.show()
     })
   })
 })
