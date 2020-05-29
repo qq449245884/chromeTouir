@@ -214,20 +214,58 @@ Page Actions与Browser Actions非常类似，除了Page Actions没有badge外，
 
 
 
+第10节
+
+上节课我们留了一个问题，就是我们的page action 只想在 developer.chrome.com 下才高亮，所以我们需要借助 content scripts 来实现，那这节课我们就来学习一下什么是 content scripts 以及如何使用它，让我们开始吧。
+
+
+
+content scripts 可以做很多事情，那么 content scripts 是什么 呢？它基本上是在网页上下文中运行的文件，因此它可以在任何的网站上更改 dom ，比如更改 h1 ，a 标签的字体颜色，甚至可以重新排列 dom 树的整个节点。
+
+但它也有限制，就是不能访问绝大部分chrome.xxx.api，但我们可以通过通信来实现让 background 来帮我们调用。
+
+
+
+我们知道 content script 无法直接使用   chrome.pageAction.show  来显示 pageAction 图标，但我们的 event page 是可以调用的， 所以 我们可以使用消息 通讯。在content script 我们向 event page 说，我知道你能显示page action 操作图标，我是做不到，你能帮我做一下吗。event page 说当然没问题，只要你 cue 我下，我就显示它.
+
+那对于 poup 也是一样的，我们想在 popup 弹窗里面输入一个颜色，来更改页面对应的样式，但 popup 里面访问不到当前页面的dom,不过content script 可以。所以在popup 可以向 content scrip 老弟说，我把具体的颜色给你，你能帮我改下网页样式吗。content script 收到来自 popup 的请求，一看是大佬 ，马上应答：没问题，这就给您安排上。
+
+以上是 content script 的基本内容 ，以及它与各个不同角色的通讯方式，后面会结合代码来讲解，相信对大家会有更好的理解。
+
+
+最后
+
+content_scripts属性可以指定将哪些脚本何时注入到哪些页面中，当用户访问这些页面后，相应脚本即可自动运行，从而对页面DOM进行操作。
+
+content scripts并不是真正完全融入网页上下文中，而是运行在一个单独的被隔离的环境中。
+
+
+它的生存周期跟随着被浏览的网页，最迟到网页加载完全完成时，content script就开始跑了，直到用户当前浏览的网页被关闭,每次刷新时将重新载入。
+
+content_scripts中的脚本只是共享页面的DOM.而并不共享页面内嵌JavaScript的命名空间。也就是说，如果当前页面中的JavaScript有一个全局变量a，content_scripts中注入的脚本也可以有一个全局变量a，两者不会相互干扰。当然你也无法通过content_scripts访问到页面本身内嵌JavaScript的变量和函数。
+
+好了，Chrome插件给我们提供了这么强大的JS注入功能，那我们下节课就来玩玩它，最后。。。。
 
 
 
 
 
+第11节
 
 
+https://developer.chrome.com/extensions/contextMenus
+
+http://jscolor.com/
 
 
+小节
 
 
+通过构建 page action 插件，我们了解了 page action 仅在特定页面高亮显示，而在其余页面中刚显示为灰色。
 
+我们还了解了 conent script ，这些脚本非常强大能够Dom，content script 无法使用大部分的 chrome api，但我们可以通过消息与其他脚本进行通信。
 
-
+最后我们将 js  和 css 注入到网页中用来更改页面样式。现在我们通过两个插件分别介绍了 browser action 和 page action,，那在下节课中了，我们还是通过 编写插件的方式把这两者结合起来。最后。。。。
 
 
 
