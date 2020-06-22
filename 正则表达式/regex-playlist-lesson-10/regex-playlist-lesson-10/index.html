@@ -6,23 +6,23 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>用户 注册</h1>
+        <h1>New User Signup</h1>
         <form>
 
             <input type="text" name="username" placeholder="username">
-            <p>用户名必须为字符(包括数字)，长度 5 - 12</p>
+            <p>Username must be  and contain 5 - 12 characters</p>
 
             <input type="text" name="email" placeholder="email">
-            <p>电子邮件必须是有效地址，例如 me@mydomain.com</p>
+            <p>Email must be a valid address, e.g. me@mydomain.com</p>
 
             <input type="password" name="password" placeholder="password">
-            <p>密码必须是字母数字(包括 @ 和_和)，8 - 20个字符</p>
+            <p>Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</p>
 
             <input type="text" name="telephone" placeholder="telephone">
-            <p>电话号码必须是有效格式(11位)</p>
+            <p>Telephone must be a valid UK telephone number (11 digits)</p>
 
-            <input type="text" name="slug" placeholder="个人资料">
-            <p>个人资料长度在 8 - 20 之间</p>
+            <input type="text" name="slug" placeholder="profile slug">
+            <p>Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</p>
 
         </form>
         <script type="text/javascript" src="validation.js"></script>
