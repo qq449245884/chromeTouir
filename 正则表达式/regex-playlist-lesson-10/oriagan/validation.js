@@ -2,9 +2,10 @@
 
 const patterns = {
   telephone: /^1\d{10}$/,
-  username: /^[a-z]{5,12}$/i,
+  username: /^[a-z\d]{5,12}$/i,
+  // password: /^[a-z\d]$/,
   password: /^[\w@-]{8,20}$/,
-  slug: /^[a-z\d-]{8,20}$/
+  slug: /^[a-z\d-]{8,20}$/,
 };
 
 const inputs = document.querySelectorAll('input')
