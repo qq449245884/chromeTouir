@@ -20,8 +20,8 @@ inputs.forEach(input => {
 
 function validate (field, regex) {
   if (regex.test(field.value)) {
-    field.className = 'vallid'
+    field.className = 'valid'
   } else {
-    field.className = "invallid";
+    field.className = "invalid";
   }
 }
