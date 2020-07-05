@@ -432,12 +432,12 @@ ByronsperByronCasper.replace(/Byr(onCa)sper /g, 'X')
 
 
 
+第 14  贪婪与非贪婪
 
 
+let str = 'ab12  34cd  ff38ss 89  9'
 
-
-
-
+/\d+/g
 
 
 
