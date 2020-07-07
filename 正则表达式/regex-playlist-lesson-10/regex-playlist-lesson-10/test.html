@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'asdvsasfd<div>449245884@qq.com</div>sasfbagasdf'
+
+    let reg = /<(.+)>.+<\/\1>/
+
+    console.log(str.match(reg))
+
+    // 如果还想把标签里面的内容拿出来
+    // 这里面关键是在哪里，关键就在于对分组的使用
+    // 以及后面对前面所捕获到那个值的重复利用
+    let reg = /<(.+)>(.+)<\/\1>/
+
+  </script>
+</body>
+</html>

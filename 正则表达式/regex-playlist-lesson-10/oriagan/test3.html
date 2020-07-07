@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>敏感词的替换</title>
+</head>
+<body>
+  <script>
+    let str = '中国共产党中国人民解放军中华人民共和国'
+    let r = str.replace(/中国|军/g, input => {
+      let t = ''
+      for (let i=0; i<input.length; i++) {
+        t+='*'
+      }
+      return t
+    })
+
+    console.log(r)
+  </script>
+</body>
+</html>

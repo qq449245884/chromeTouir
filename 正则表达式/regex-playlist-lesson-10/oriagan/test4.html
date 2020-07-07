@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>千位分隔符</title>
+</head>
+<body>
+  <script>
+    let num = '344350059568504499' // 344,350,059,568,504,499
+    let r = num.replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
+    console.log(r)
+  </script>
+</body>
+</html>

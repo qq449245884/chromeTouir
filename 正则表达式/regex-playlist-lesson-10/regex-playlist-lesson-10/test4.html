@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>千位分隔符</title>
+</head>
+
+<body>
+  <script>
+    let num = '344350059568504499'//34,435,005,956,504,849
+    // 也就是说, 以 3 位数字结尾的，所以这里我们会用到结尾特殊符号 $
+    // 
+    // let r = num.replace(/(\d)(?:\d{3}+$)/g, '$1,')
+    //    let r = num.replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+    let r = num.replace(/(\d)(?=(?:\d{3})+$)/g, '$1,')
+    console.log(r)
+  </script>
+</body>
+</html>

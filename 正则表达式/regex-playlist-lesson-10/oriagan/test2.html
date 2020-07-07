@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>在网页中找电话</title>
+</head>
+<body>
+  <div id="box">
+    <p>姓名：前端小智</p>
+    <h3>电话：13949483322</h3>
+    <p>性别：男</p>
+  </div>
+  <script>
+    let oBox = document.querySelector('#box')
+    let str = oBox.innerHTML
+    let reg = /.*<(.{1,8})>电话：(\d{11})<\/\1>/
+    console.log(str.match(reg)[2])
+  </script>
+</body>
+</html>
