@@ -1,15 +1,15 @@
-function longestWorld(str) {
-  let words = str.split(" ")
-  let longestWorld = ""
 
-  for (let word of words) {
-    if (word.length > longestWorld.length) {
-      longestWorld = word
-    }
-  }
-  
-  return longestWorld;
+function checkPalindrome (str) {
+  let temStr = str.match(/[a-z0-9]+/ig).join('').toLowerCase()
+  let second = temStr.split('').reverse().join('')
+  return temStr === second
 }
 
-console.log(longestWorld("I woke up earyly today"));
-console.log(longestWorld("I went straight to then beach"));
+console.log(checkPalindrome('Was it a car or a cat I saw'))
+// true
+
+console.log(checkPalindrome('Red - rum-, sir,-is-murder'))
+// true
+
+console.log(checkPalindrome('I got up early this morning'))
+// false
