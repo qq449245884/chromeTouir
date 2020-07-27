@@ -1,7 +1,7 @@
 /* --- Variables --- */
 :root{
-    --theme-color: #3e84da;
-    --link-color: #daa33e;
+    --theme-color: pink;
+    --link-color: #333;
 }
 /* --- Main styles --- */
 
@@ -25,12 +25,10 @@ nav.main-nav ul{
 }
 
 nav a{
-    /* color: #daa33e; */
     color: var(--link-color);
 }
 
 .banner{
-    /* background: #3e84da; */
     background: var(--theme-color);
     color: #fff;
     font-size: 1.6em;
@@ -53,8 +51,7 @@ nav a{
 }
 
 .spot h2{
-    /* color: #3e84da; */
-    color:  var(--theme-color);
+    color: var(--theme-color);
 }
 
 .spot p{
@@ -64,7 +61,6 @@ nav a{
 }
 
 .content a{
-    /* color: #daa33e; */
     color: var(--link-color);
     font-size: 1.2em;
 }
