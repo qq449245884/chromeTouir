@@ -106,12 +106,54 @@ nav a{
 
 
 
+第二节课   CSS 变量的好处
+
+这节课来介绍一下 css 变量 比 sass和 less 变量更好用的地方。 
+
+第一点最明显的就是 sass 和less 两者都需要转换成 css 这样浏览器才能解析。但 css 变量是不用的，所以css变量比 sass less 的一个好处就是少了一次转换。
+
+
+因为 sass 和 less 都 需要 被转制成 css 浏览器 才能解析，所以我们在浏览器是不能直接调试 sass 和 less 的，但css 变量是可以直接调试的
 
 
 
+比如我们可以直接 使用 f12 在浏览器上直接 调试， 我们可以看到上节课程声明的 两个 css 变量，如果是使用 sass 或者 less 我们是无法在这里修改的，因为它们需要被转译成css 浏览器才能理解。
+
+所以 css 变量 相对 sass 和less 的另一个好处。
+
+
+那还有什么好处呢，
+
+我们可以在 媒体查询中覆盖 css 变量 ，但在 sass  和 less 中是很难做到的。
+
+
+:root{
+  --layout: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 760px) ｛
+   :root{
+    --layout: 1fr；
+  }
+}
+
+   grid-template-columns: var(--layout)
+
+
+这样我们就很容易根据 媒体查询来覆盖对应的原有的 css 变量，但在ass 和 less 是很难做到的。
 
 
 
+接着，我们来讲css 变量的最后一个好处，我们可以在确定的作用域来覆盖css变量。
+
+
+nav{
+  --link-color: #333;
+}
+
+在sass 或者 less 是很难做到这样的，除非使用了 mixin 或者 其它 操作 但在 csss 变量中就非常的简单。
+
+出于这些原因，相比 sass less 变量，我更喜欢 css 变量。
 
 
 

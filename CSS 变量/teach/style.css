@@ -2,7 +2,19 @@
 :root{
     --theme-color: pink;
     --link-color: #333;
+    --layout: 1fr 1fr 1fr;
 }
+
+nav {
+    --link-color: green;
+}
+
+@media screen and (max-width: 760px) {
+    :root{
+        --layout: 1fr;
+    }
+}
+
 /* --- Main styles --- */
 
 h1, h2, h3{
@@ -72,7 +84,7 @@ footer{
 
 footer .blurbs{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:var(--layout);
     max-width: 760px;
     margin: 0 auto;
     grid-gap: 40px;
