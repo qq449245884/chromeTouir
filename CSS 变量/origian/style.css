@@ -1,4 +1,19 @@
 /* --- Variables --- */
+:root{
+    --theme-color: pink;
+    --link-color: #333;
+    --layout: 1fr 1fr 1fr;
+}
+
+nav {
+   --link-color: green;
+}
+
+@media screen and (max-width: 760px) {
+    :root{
+        --layout: 1fr;
+    }
+}
 
 /* --- Main styles --- */
 
@@ -22,11 +37,11 @@ nav.main-nav ul{
 }
 
 nav a{
-    color: #daa33e;
+    color: var(--link-color);
 }
 
 .banner{
-    background: #3e84da;
+    background: var(--theme-color);
     color: #fff;
     font-size: 1.6em;
     text-align: center;
@@ -48,7 +63,7 @@ nav a{
 }
 
 .spot h2{
-    color: #3e84da;
+    color: var(--theme-color);
 }
 
 .spot p{
@@ -58,7 +73,7 @@ nav a{
 }
 
 .content a{
-    color: #daa33e;
+    color: var(--link-color);
     font-size: 1.2em;
 }
 
@@ -69,7 +84,7 @@ footer{
 
 footer .blurbs{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:var(--layout);
     max-width: 760px;
     margin: 0 auto;
     grid-gap: 40px;
@@ -80,4 +95,12 @@ footer .blurb{
     color: #333;
     line-height: 2em;
     font-size: 0.9em
+}
+
+.swatches span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
 }

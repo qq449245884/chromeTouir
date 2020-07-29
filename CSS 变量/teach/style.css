@@ -6,7 +6,7 @@
 }
 
 nav {
-    --link-color: green;
+   --link-color: green;
 }
 
 @media screen and (max-width: 760px) {
@@ -95,4 +95,12 @@ footer .blurb{
     color: #333;
     line-height: 2em;
     font-size: 0.9em
+}
+
+.swatches span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
 }
