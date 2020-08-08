@@ -61,7 +61,11 @@ HTML 4.0.1 有两个版本，一个严格模式和一个传统模式
 
 第四节：浏览器的渲染过程
 
-第一步 把 THML 转成  HTML Parser ，也是就 Dom Parser 转成 Dom，然后 CSS 按 CSS 规则和 CSS 解释器围成 CSSOM  tree， 最后 Dom tree 和 CSSOM tree 加个 attachment 结合就形成了 render tree , render tree 就是告诉浏览器我渲染的结构就出来。与它平行的还有 Layout ，什么是 Layout ?
+第一步 把 THML 转成  HTML Parser ，也是就 Dom Parser 转成 Dom，然后 CSS 按 CSS 规则和 CSS 解释器围成 CSSOM  tree，
+
+ 最后 Dom tree 和 CSSOM tree 加个 attachment 结合就形成了 render tree , 
+
+render tree 就是告诉浏览器我渲染的结构就出来。与它平行的还有 Layout ，什么是 Layout ?
 
 
 刚才说的 render tree 它不包含 html 具体内容，它也不知道这个位置是什么 ，也就是在 Layout 之前 某个元素比如说 div 具体应该画在屏幕的哪个位置。有了 Layout 浏览器就能知道就能精确 的知道要显示这些 dom 元素真正的位置 宽，高，颜色等
