@@ -18,7 +18,7 @@
 
 400 Bad Request: 客户端请求有语法错误，不能被服务器所理解。
 
-401 Unauthorized: 请求未经授权，这个状态代码必须和 WWWW-Authenticate 报头域一起使用
+401 Unauthorized: 请求未经授权，这个状态代码必须和 WWW-Authenticate 报头域一起使用
 
 403 Forbidden：对被请求页面的访问被禁止
 
